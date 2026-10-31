@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-label="Brew &amp; Bloom — Social Post">
+<title>Brew &amp; Bloom — Social Post</title>
+<defs>
+<style>
+@font-face{font-family:'Inter';src:url('../Fonts/Inter-Regular.ttf');font-weight:400;font-style:normal}
+@font-face{font-family:'Inter';src:url('../Fonts/Inter-Medium.ttf');font-weight:500;font-style:normal}
+@font-face{font-family:'Inter';src:url('../Fonts/Inter-SemiBold.ttf');font-weight:600;font-style:normal}
+@font-face{font-family:'Inter';src:url('../Fonts/Inter-Bold.ttf');font-weight:700;font-style:normal}
+@font-face{font-family:'Space Grotesk';src:url('../Fonts/SpaceGrotesk-Regular.ttf');font-weight:400;font-style:normal}
+@font-face{font-family:'Space Grotesk';src:url('../Fonts/SpaceGrotesk-Medium.ttf');font-weight:500;font-style:normal}
+@font-face{font-family:'Space Grotesk';src:url('../Fonts/SpaceGrotesk-Bold.ttf');font-weight:700;font-style:normal}
+@font-face{font-family:'Fraunces';src:url('../Fonts/Fraunces-Regular.ttf');font-weight:400;font-style:normal}
+@font-face{font-family:'Fraunces';src:url('../Fonts/Fraunces-SemiBold.ttf');font-weight:600;font-style:normal}
+@font-face{font-family:'Fraunces';src:url('../Fonts/Fraunces-Bold.ttf');font-weight:700;font-style:normal}
+@font-face{font-family:'Bebas Neue';src:url('../Fonts/BebasNeue-Regular.ttf');font-weight:400;font-style:normal}
+@font-face{font-family:'IBM Plex Mono';src:url('../Fonts/IBMPlexMono-Regular.ttf');font-weight:400;font-style:normal}
+@font-face{font-family:'IBM Plex Mono';src:url('../Fonts/IBMPlexMono-Medium.ttf');font-weight:500;font-style:normal}
+@font-face{font-family:'IBM Plex Mono';src:url('../Fonts/IBMPlexMono-Bold.ttf');font-weight:700;font-style:normal}
+@font-face{font-family:'Bitter';src:url('../Fonts/Bitter-Regular.ttf');font-weight:400;font-style:normal}
+@font-face{font-family:'Bitter';src:url('../Fonts/Bitter-Bold.ttf');font-weight:700;font-style:normal}
+@font-face{font-family:'Caveat';src:url('../Fonts/Caveat-Regular.ttf');font-weight:400;font-style:normal}
+@font-face{font-family:'Caveat';src:url('../Fonts/Caveat-Bold.ttf');font-weight:700;font-style:normal}
+@font-face{font-family:'DM Serif Display';src:url('../Fonts/DMSerifDisplay-Regular.ttf');font-weight:400;font-style:normal}
+@font-face{font-family:'Archivo Black';src:url('../Fonts/ArchivoBlack-Regular.ttf');font-weight:400;font-style:normal}
+text{font-kerning:normal;}
+</style>
+
+    <linearGradient id="p15social" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1A2B44"/><stop offset="100%" stop-color="#101B2D"/>
+    </linearGradient>
+    
+</defs>
+<rect x="0" y="0" width="1080" height="1080" fill="#152238"/>
+<rect x="0" y="0" width="1080" height="1080" fill="url(#p15social)"/><circle cx="980" cy="130" r="240" fill="none" stroke="#EE7F2D" stroke-width="1.2" opacity="0.38"/><circle cx="930" cy="72" r="7" fill="#EE7F2D" opacity="0.95"/><text x="80" y="96" font-family="IBM Plex Mono" font-weight="400" font-size="9" fill="#E7C27A" text-anchor="start" letter-spacing="1.6">BREW &amp; BLOOM  /  SOCIAL</text><line x1="80" y1="118" x2="1000" y2="118" stroke="#F7F1E5" stroke-width="1" opacity="0.2"/><text x="80" y="292" font-family="Fraunces" font-weight="600" font-size="126" fill="#F7F1E5" text-anchor="start" letter-spacing="-5">FRESH</text><text x="80" y="344" font-family="IBM Plex Mono" font-weight="500" font-size="38" fill="#EE7F2D" text-anchor="start" letter-spacing="1.0">FROM THE OVEN.</text><text x="80" y="404" font-family="Inter" font-weight="400" font-size="19" fill="#F7F1E5" text-anchor="start" opacity="0.72">Slow mornings, warm pastry and coffee</text><text x="80" y="432" font-family="Inter" font-weight="400" font-size="19" fill="#F7F1E5" text-anchor="start" opacity="0.72">made for the neighbourhood.</text><circle cx="540" cy="700" r="158" fill="#F7F1E5"/><path d="M 465.74 780.58 Q 540.00 794.80 614.26 780.58" fill="none" stroke="#152238" stroke-width="5.372" stroke-linecap="round"/><path d="M 585.82 714.22 C 631.64 714.22 631.64 756.88 587.40 756.88" fill="none" stroke="#152238" stroke-width="11.376000000000001" stroke-linecap="round"/><path d="M 479.96 701.58 L 492.60 755.30 Q 495.76 771.10 513.14 771.10 L 562.12 771.10 Q 579.50 771.10 584.24 753.72 L 595.30 701.58 Z" fill="#152238"/><path d="M 540.00 701.58 C 538.42 681.04 541.58 663.66 540.00 647.86" fill="none" stroke="#152238" stroke-width="5.688000000000001" stroke-linecap="round"/><path d="M 540.00 669.98 C 509.98 669.98 491.02 647.86 497.34 625.74 C 522.62 630.48 536.84 651.02 540.00 669.98 Z" fill="#EE7F2D"/><path d="M 540.00 658.92 C 565.28 658.92 585.82 638.38 579.50 616.26 C 555.80 622.58 543.16 639.96 540.00 658.92 Z" fill="#EE7F2D"/><path d="M 540.00 660.50 C 538.42 646.28 541.58 632.06 540.00 619.42" fill="none" stroke="#152238" stroke-width="1.4220000000000002" opacity="0.28" stroke-linecap="round"/><line x1="80" y1="944" x2="1000" y2="944" stroke="#F7F1E5" stroke-width="1" opacity="0.2"/><text x="80" y="988" font-family="IBM Plex Mono" font-weight="400" font-size="11" fill="#E7C27A" text-anchor="start" letter-spacing="1.1">OPEN DAILY  /  07:00—18:00</text><text x="1000" y="988" font-family="IBM Plex Mono" font-weight="400" font-size="11" fill="#F7F1E5" text-anchor="end" letter-spacing="0.9" opacity="0.62">214 ALDER STREET  /  PORTLAND</text><text x="80" y="1028" font-family="IBM Plex Mono" font-weight="500" font-size="9" fill="#EE7F2D" text-anchor="start" letter-spacing="2.0">COFFEE  ·  BOTANICAL BAKERY</text>
+</svg>
