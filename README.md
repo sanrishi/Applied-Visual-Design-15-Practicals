@@ -1,55 +1,187 @@
-# Applied Visual Design Project
+# Applied Visual Design — 15 Practicals
 
-Fifteen original, editable vector designs created as practical exercises based on
-`Applied_Visual_Design_Practical_File.pdf` (Practicals P01–P15).
+**A premium portfolio of 15 original, editable vector design compositions** — covering composition, colour theory, typography, grid systems, print layout, visual narratives, and a complete brand identity project.
 
-## What was delivered
+> **Fifteen practicals. One cohesive design system. Fully editable SVG sources, print-ready PDFs, and PNG previews.**
 
-| Folder | Contents |
-|--------|----------|
-| `SVG_Source/` | 15 editable SVG source files (P01–P15) plus 4 P15 sub-assets (logo, business card, menu, social post). All text is live `<text>`; colour fills are swatch-referenced. |
-| `PNG_Previews/` | 2× screenshot previews of every design. P09 and P15 social are also saved at 1080×1080 px. |
-| `Final_PDF/Individual_PDF/` | One standalone PDF per design (P01–P15), fonts embedded, exact page sizes. |
-| `Final_PDF/CMYK_Print/` | True CMYK PDF exports for the two print practicals: P08 (A4, 3 mm bleed) and P12 (A3, 3 mm bleed). Produced with Ghostscript 10.08 (`/DeviceCMYK`, prepress). |
-| `Final_PDF/Sub_Assets/` | PDFs of the four P15 sub-assets: logo, business card, menu, social post. |
-| `Final_PDF/Applied_Visual_Design_15_Practicals.pdf` | Combined 15-page PDF in design order, with bookmarks (TOC) and embedded fonts. |
-| `Fonts/` | Static-instance TTF fonts bundled with the project. SVGs reference them with relative `@font-face` URLs (`../Fonts/…`). |
-| `Illustrator_Source/` | Empty. No native `.ai` files. See below. |
+---
 
-## Design specifications honoured
+## 🎯 Project Overview
 
-- **P08 Print Layout**: A4 (210 × 297 mm), 3 mm bleed → 216 × 303 mm SVG/PDF artboard, CMYK-spec colours, crop marks, 3-column grid, trim line.
-- **P09 Digital Post**: 1080 × 1080 px, RGB, 8 px spacing system, 64 px margins.
-- **P12 Save Water Poster**: A3 (297 × 420 mm), 3 mm bleed → 303 × 426 mm artboard, CMYK-spec colours, bleed, crop marks, large water-drop focal point.
-- **P15 Brand Identity**: Fictional café "BREW & BLOOM" — original cup-and-sprout mark, navy/orange/sand/cream palette, Fraunces + Inter typography, core identity board, business cards, menu, takeaway cup application, typography and colour boards, plus social post.
+This repository presents **15 applied visual design practicals**, created as original vector artwork inspired by the *Applied Visual Design Practical File* specification. Each piece focuses on a distinct design principle — from the elements of design and asymmetrical balance to 12-column grids, A4/A3 print layouts with bleed, expressive typography, visual storytelling, and a complete fictional brand identity (**Brew & Bloom**).
 
-## Fonts
+All artwork is **original vector composition**, not raster screenshots or page reproductions. Every file is an editable SVG with live text, ready to open in Adobe Illustrator, Inkscape, Figma, or any SVG editor.
 
-Fonts are static instances bundled under `Fonts/`. SVGs use relative `@font-face` URLs, so the files remain editable in Illustrator / any SVG editor **provided the `Fonts/` folder is copied alongside** and installed on that machine for exact appearance. Fonts used: Inter, Space Grotesk, Fraunces, Bebas Neue, IBM Plex Mono, Bitter, Caveat, DM Serif Display, Archivo Black.
+---
 
-## Honest delivery notes / environment limitations
+## 🗂️ Quick Navigation
 
-1. **No native `.ai` files.** Adobe Illustrator is not installed in this environment, so no genuine `.ai` source exists. `Illustrator_Source/` is intentionally empty. The editable source format provided is SVG. Do not rename an SVG or PDF to `.ai` — that would not be a native Illustrator file.
+| Section | Link |
+|---------|------|
+| 🖼️ Visual Gallery | [docs/gallery/index.html](./docs/gallery/index.html) |
+| 📋 Project Overview | [docs/PROJECT_OVERVIEW.md](./docs/PROJECT_OVERVIEW.md) |
+| 🎨 Design Process | [docs/DESIGN_PROCESS.md](./docs/DESIGN_PROCESS.md) |
+| 📁 SVG Sources (Editable) | [SVG_Source/](./SVG_Source/) |
+| 📄 PDF Deliverables | [Final_PDF/](./Final_PDF/) |
+| 🖼️ PNG Previews | [PNG_Previews/](./PNG_Previews/) |
+| 📦 Release v1.0.0 | [Releases](../../releases) |
 
-2. **CMYK.** Actual CMYK conversion was only possible for P08 and P12 via Ghostscript 10.08 (`/DeviceCMYK`). Ghostscript was installed from the official Artifex build (`gs10080w64.exe`) into `C:\Users\OM\AppData\Local\Temp\opencode\gs_install\gs\bin\gswin64c.exe`. Verified with `gs -o - -sDEVICE=inkcov` that both files emit DeviceCMYK ink values. All other PDFs remain in the RGB/sRGB workspace they were authored in (the designs are screen/print hybrids); converting them would change the intended screen appearance.
+---
 
-3. **Playwright / Chrome rendering.** PNG previews are Chrome screenshots at device scale factor 2. Fonts render from the bundled `Fonts/` folder via relative `@font-face` URLs during rendering.
+## 📦 What Was Delivered
 
-4. **Theory/written answers.** Out of scope. The user's friend will write the written/theory answers for each practical.
+| Asset | Count | Location |
+|-------|-------|----------|
+| Editable SVG sources | **19** | `SVG_Source/` |
+| Individual PDFs (P01–P15) | **15** | `Final_PDF/Individual_PDF/` |
+| Combined 15-page PDF | **1** | `Final_PDF/Applied_Visual_Design_15_Practicals.pdf` |
+| CMYK print PDFs (P08, P12) | **2** | `Final_PDF/CMYK_Print/` |
+| Brand sub-asset PDFs (P15) | **4** | `Final_PDF/Sub_Assets/` |
+| PNG previews | **21** | `PNG_Previews/` |
+| Font files (bundled) | **20** | `Fonts/` |
 
-5. **Originality.** All 15 compositions are original vector artwork inspired by the PDF references — not raster screenshots, not page reproductions. No Illustrator-native features (live paint, symbols, etc.) are used because there is no `.ai` master.
+---
 
-## File naming convention
+## 📐 The 15 Practicals
 
-- `P01_Elements_of_Design` … `P14_Concept_to_Final.svg`
-- `P15_Brand_Identity.svg` (master board), `P15_Logo.svg`, `P15_Business_Card.svg`, `P15_Menu.svg`, `P15_Social_Post.svg`
-- PNG previews share the same stem with `.png`.
-- Individual PDFs share the same stem with `.pdf` in `Final_PDF/Individual_PDF/`.
-- CMYK prints: `P08_Print_Layout_CMYK.pdf`, `P12_Save_Water_Poster_CMYK.pdf` in `Final_PDF/CMYK_Print/`.
+| # | Title | Focus | Artboard |
+|---|-------|-------|----------|
+| P01 | Elements of Design | Line, shape, form, texture, space | 1440 × 960 px |
+| P02 | Asymmetrical Balance | Proportion & visual weight | 1440 × 960 px |
+| P03 | Contrast & Focal Point | Rule of thirds, single focal element | 1440 × 960 px |
+| P04 | Rhythm & Repetition | Visual pulse along a curved path | 1440 × 960 px |
+| P05 | Visual Hierarchy | Primary / secondary / tertiary type | 1440 × 960 px |
+| P06 | 12-Column Grid Layout | 15 mm margins, 8 pt gutters | 1440 × 960 px |
+| P07 | Z-Pattern Layout | Eye-flow study for landing page | 1440 × 960 px |
+| P08 | A4 Print Layout | 3 mm bleed, crop marks, CMYK | 216 × 303 mm |
+| P09 | Digital Post | 8 px spacing system, 64 px margins | 1080 × 1080 px |
+| P10 | Typography Study | Six typeface classifications | 1440 × 960 px |
+| P11 | Expressive Typography | Type + colour = emotion | 1440 × 960 px |
+| P12 | Save Water Poster | A3, 3 mm bleed, water-drop focal | 303 × 426 mm |
+| P13 | Visual Narrative | Seed → sprout → plant → tree | 1600 × 900 px |
+| P14 | Concept to Final | Research → sketch → draft → refine | 1440 × 960 px |
+| P15 | Brew & Bloom Brand Identity | Logo, palette, type, cards, menu | 1600 × 1000 px |
 
-## How to use
+---
 
-- Open any `*.svg` in Illustrator, Inkscape, Figma, or a browser to edit text, colours, and shapes.
-- Install the project fonts from `Fonts/` for exact type appearance.
-- Print P08 / P12 from the `CMYK_Print/` files (true DeviceCMYK, 3 mm bleed, crop marks).
-- Use `Applied_Visual_Design_15_Practicals.pdf` for a single combined deliverable in order P01–P15.
+## 🎨 Colour System
+
+A warm neutral system used across the portfolio:
+
+| Colour | Hex | Swatch | Usage |
+|--------|-----|--------|-------|
+| **Navy** | `#152238` | ![](https://via.placeholder.com/24/152238/152238?text=+) | Structure, deep backgrounds, primary text |
+| **Orange** | `#EE7F2D` | ![](https://via.placeholder.com/24/EE7F2D/EE7F2D?text=+) | Energy, accents, CTAs, highlights |
+| **Sand** | `#E7C27A` | ![](https://via.placeholder.com/24/E7C27A/E7C27A?text=+) | Warm mid-tones, secondary elements |
+| **Cream** | `#F7F1E5` | ![](https://via.placeholder.com/24/F7F1E5/F7F1E5?text=+) | Backgrounds, breathing room |
+
+---
+
+## 🔤 Typography
+
+| Role | Font | Styles |
+|------|------|--------|
+| **Display** | Fraunces | SemiBold / Bold |
+| **Display** | Space Grotesk | Bold |
+| **Display** | Bebas Neue | Regular |
+| **Body** | Inter | Regular / Medium / SemiBold / Bold |
+| **Mono** | IBM Plex Mono | Regular / Medium / Bold |
+| **Accent** | Bitter | Regular / Bold |
+| **Script** | Caveat | Regular / Bold |
+
+Fonts are bundled in [`Fonts/`](./Fonts/) as static TTF instances. SVGs reference them via relative `@font-face` URLs (`../Fonts/…`). Install the project fonts on your machine for exact type appearance when opening SVGs in Illustrator.
+
+---
+
+## 🖼️ Visual Gallery
+
+Browse all 15 designs with previews, descriptions, and direct links to their editable SVG source and PDF:
+
+👉 **[View Visual Gallery →](./docs/gallery/index.html)**
+
+Each card in the gallery links to:
+- **SVG Source** — the editable vector file
+- **PDF** — the font-embedded print/digital file
+
+---
+
+## 📥 Download Options
+
+### Option 1: GitHub Release (Recommended)
+Download the complete release package from the [Releases page](../../releases):
+
+- **All 19 editable SVGs**
+- **All 22 PDFs** (15 individual + combined + CMYK + sub-assets)
+- **All 21 PNG previews**
+- **All 20 font files**
+- **README & documentation**
+
+### Option 2: Clone the Repository
+```bash
+git clone https://github.com/sanrishi/Applied-Visual-Design-15-Practicals.git
+```
+
+---
+
+## 🛠️ How to Open & Edit SVG Sources
+
+1. **Install the project fonts** from [`Fonts/`](./Fonts/) for exact type appearance.
+2. **Open any `.svg`** in Adobe Illustrator, Inkscape, Figma, or a web browser.
+3. All text is live `<text>` — colours, shapes, gradients, and clipping paths are fully editable.
+4. ⚠️ **Do not rename SVG files to `.ai`.** SVGs are the editable source format; no native `.ai` files exist in this project (see note below).
+
+---
+
+## 📁 File Structure
+
+```
+Applied-Visual-Design-15-Practicals/
+├── README.md                              # This file
+├── docs/
+│   ├── gallery/index.html                 # Visual gallery of all 15 designs
+│   ├── PROJECT_OVERVIEW.md                # Project overview & specs
+│   ├── DESIGN_PROCESS.md                  # Design decisions & principles
+│   └── social-preview.png                 # GitHub social preview (1280 × 640)
+├── SVG_Source/                            # 19 editable SVG files (P01–P15 + P15 sub-assets)
+├── PNG_Previews/                          # 21 rendered PNG previews (2×)
+├── Fonts/                                 # 20 bundled font files (TTF)
+├── Final_PDF/
+│   ├── Individual_PDF/                    # 15 standalone PDFs
+│   ├── Combined_PDF: Applied_Visual_Design_15_Practicals.pdf
+│   ├── CMYK_Print/                        # P08 & P12 true CMYK exports
+│   └── Sub_Assets/                        # P15 logo, business card, menu, social
+└── Illustrator_Source/
+    └── README.md                          # Why no native .ai files exist
+```
+
+---
+
+## ⚠️ Honest Technical Limitations
+
+- **No native `.ai` files.** Adobe Illustrator is not installed in this environment, so no genuine `.ai` document exists. SVGs are the editable source format and open natively in Illustrator. `Illustrator_Source/` contains an explanatory note only — do not add fake `.ai` files.
+- **CMYK conversion** was performed only for the two print practicals (P08 A4, P12 A3) via Ghostscript 10.08. All other PDFs remain in the sRGB workspace they were authored in.
+- **Theory / written answers** are out of scope — those are handled separately.
+- **Brew & Bloom (P15)** is a fictional brand. All names, contact details, addresses, and menu items are placeholder content created for the portfolio.
+
+---
+
+## 🛠️ Technologies & Tools
+
+- **Authoring:** SVG (hand-coded via Python helper library)
+- **Rendering:** Google Chrome (headless, 2× device scale)
+- **PDF export:** Chrome print-to-PDF + PyMuPDF (combined 15-page PDF with bookmarks)
+- **CMYK conversion:** Ghostscript 10.08 (`/DeviceCMYK`, prepress settings)
+- **Validation:** Ghostscript `inkcov` (DeviceCMYK verification)
+
+---
+
+## 📄 License
+
+All artwork in this repository is original student project work created for the Applied Visual Design course. No permissive open-source license is applied. If you wish to reuse or adapt any artwork, please contact the repository owner for permission.
+
+---
+
+<p align="center">
+  <b>Applied Visual Design — 15 Practicals</b><br>
+  Editable SVG · Print-ready PDF · Brand Identity · Typography
+</p>

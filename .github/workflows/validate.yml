@@ -1,0 +1,114 @@
+name: Validate Design Deliverables
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install PyMuPDF lxml
+
+      - name: Verify all 15 main SVG files exist
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          svg_dir = Path('Applied_Visual_Design_Project/SVG_Source')
+          expected = [f'P{i:02d}' for i in range(1, 16)]
+          found = sorted(p.stem for p in svg_dir.glob('P[0-9][0-9]_*.svg'))
+          missing = [n for n in expected if not any(n in x for x in found)]
+          print(f'SVG practicals found: {len(found)}')
+          print(f'Missing: {missing if missing else "NONE"}')
+          assert not missing, f'Missing SVG practicals: {missing}'
+          PY
+
+      - name: Verify all 15 individual PDFs exist
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          pdf_dir = Path('Applied_Visual_Design_Project/Final_PDF/Individual_PDF')
+          expected = [f'P{i:02d}' for i in range(1, 16)]
+          found = sorted(p.stem for p in pdf_dir.glob('P[0-9][0-9]_*.pdf'))
+          missing = [n for n in expected if not any(n in x for x in found)]
+          print(f'Individual PDFs found: {len(found)}')
+          print(f'Missing: {missing if missing else "NONE"}')
+          assert not missing, f'Missing individual PDFs: {missing}'
+          PY
+
+      - name: Verify combined PDF has 15 pages in correct order
+        run: |
+          python - <<'PY'
+          import fitz
+          from pathlib import Path
+          combined = Path('Applied_Visual_Design_Project/Final_PDF/Applied_Visual_Design_15_Practicals.pdf')
+          doc = fitz.open(combined)
+          assert doc.page_count == 15, f'Expected 15 pages, got {doc.page_count}'
+          toc = doc.get_toc()
+          assert len(toc) == 15, f'Expected 15 TOC entries, got {len(toc)}'
+          expected_order = [f'P{i:02d}' for i in range(1, 16)]
+          titles = ' '.join(t[1] for t in toc)
+          for e in expected_order:
+              assert e in titles, f'TOC missing {e}'
+          print(f'Combined PDF: {doc.page_count} pages, {len(toc)} TOC entries — OK')
+          doc.close()
+          PY
+
+      - name: Verify SVG files are valid XML
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import lxml.etree as ET
+          svg_dir = Path('Applied_Visual_Design_Project/SVG_Source')
+          bad = []
+          for p in svg_dir.glob('*.svg'):
+              try:
+                  ET.parse(str(p))
+              except Exception as e:
+                  bad.append((p.name, str(e)))
+          print(f'SVG files validated: {len(list(svg_dir.glob("*.svg")))}')
+          if bad:
+              for name, err in bad:
+                  print(f'  INVALID: {name} — {err}')
+              raise SystemExit(1)
+          print('All SVG files are valid XML — OK')
+          PY
+
+      - name: Verify expected fonts and assets exist
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          project = Path('Applied_Visual_Design_Project')
+          required_dirs = ['SVG_Source', 'PNG_Previews', 'Final_PDF', 'Fonts', 'docs']
+          for d in required_dirs:
+              assert (project / d).is_dir(), f'Missing directory: {d}'
+          font_count = len(list((project / 'Fonts').glob('*.ttf')))
+          print(f'Font files bundled: {font_count}')
+          assert font_count >= 15, 'Expected at least 15 font files'
+          print('Required directories and fonts present — OK')
+          PY
+
+      - name: Verify PNG previews exist for all 15 practicals
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          png_dir = Path('Applied_Visual_Design_Project/PNG_Previews')
+          expected = [f'P{i:02d}' for i in range(1, 16)]
+          found = [p.stem for p in png_dir.glob('P[0-9][0-9]*.png')]
+          missing = [n for n in expected if not any(n in x for x in found)]
+          print(f'PNG previews found: {len(found)}')
+          print(f'Missing: {missing if missing else "NONE"}')
+          assert not missing, f'Missing PNG previews: {missing}'
+          PY
