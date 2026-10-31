@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visual Gallery — Applied Visual Design 15 Practicals</title>
+<style>
+  :root{
+    --navy:#152238;
+    --orange:#EE7F2D;
+    --sand:#E7C27A;
+    --cream:#F7F1E5;
+    --muted:#6E6A61;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    background:var(--cream);
+    color:var(--navy);
+    line-height:1.5;
+    padding:40px 20px;
+  }
+  .container{max-width:1100px;margin:0 auto}
+  header{
+    text-align:center;
+    margin-bottom:60px;
+    padding-bottom:40px;
+    border-bottom:2px solid var(--sand);
+  }
+  h1{
+    font-size:3rem;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    margin-bottom:12px;
+    color:var(--navy);
+  }
+  .subtitle{
+    font-size:1.125rem;
+    color:var(--orange);
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  .intro{
+    max-width:700px;
+    margin:0 auto 24px;
+    color:var(--muted);
+    font-size:1rem;
+  }
+  .gallery-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:24px;
+    justify-content:center;
+    margin-bottom:40px;
+  }
+  .card{
+    background:#ffffff;
+    border:1px solid #e8e2d6;
+    border-radius:8px;
+    overflow:hidden;
+    width:340px;
+    display:flex;
+    flex-direction:column;
+    transition:transform .2s ease,box-shadow .2s ease;
+  }
+  .card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(21,34,56,0.12);
+    border-color:var(--orange);
+  }
+  .card-thumb{
+    position:relative;
+    height:230px;
+    background:#f0ebe1;
+    overflow:hidden;
+  }
+  .card-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    opacity:0.92;
+    transition:opacity .3s ease;
+  }
+  .card:hover .card-thumb img{opacity:1}
+  .badge{
+    position:absolute;
+    top:12px;
+    left:12px;
+    background:var(--navy);
+    color:#fff;
+    font-size:0.75rem;
+    font-weight:700;
+    padding:4px 10px;
+    border-radius:4px;
+    letter-spacing:0.08em;
+  }
+  .card-body{
+    padding:20px 20px 24px;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+  }
+  h3{
+    font-size:1.25rem;
+    font-weight:700;
+    margin-bottom:8px;
+    color:var(--navy);
+    line-height:1.3;
+  }
+  .desc{
+    font-size:0.875rem;
+    color:var(--muted);
+    margin-bottom:18px;
+    flex:1;
+    line-height:1.5;
+  }
+  .card-links{
+    display:flex;
+    gap:10px;
+    margin-top:auto;
+  }
+  .link{
+    flex:1;
+    font-size:0.8rem;
+    font-weight:600;
+    letter-spacing:0.06em;
+    padding:8px 12px;
+    border-radius:4px;
+    text-decoration:none;
+    text-align:center;
+    transition:all .2s ease;
+    border:1px solid transparent;
+  }
+  .link.svg{background:var(--navy);color:#fff}
+  .link.svg:hover{background:#0f1a2d;color:#fff}
+  .link.pdf{background:transparent;color:var(--orange);border-color:var(--orange)}
+  .link.pdf:hover{background:var(--orange);color:#fff}
+  footer{
+    text-align:center;
+    margin-top:60px;
+    padding-top:30px;
+    border-top:1px solid #e8e2d6;
+    color:var(--muted);
+    font-size:0.875rem;
+  }
+  footer a{color:var(--orange);text-decoration:none;font-weight:600}
+  footer a:hover{text-decoration:underline}
+  @media (max-width:768px){
+    body{padding:20px 16px}
+    h1{font-size:2.2rem}
+    .card{width:100%}
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="subtitle">Applied Visual Design Portfolio</div>
+    <h1>Visual Gallery</h1>
+    <p class="intro">Fifteen original editable vector design compositions — from composition and colour to typography, grids, posters, and a complete brand identity. Click a card to open the editable SVG source or download the PDF.</p>
+  </header>
+
+  <div style="max-width:700px;margin:0 auto 50px;">
+    <h2 style="font-size:1.5rem;margin-bottom:16px;color:var(--navy);">All 15 Practicals</h2>
+    <div class="gallery-row">
+        <div class="card">
+          <div class="card-thumb">
+            <img src="../../PNG_Previews/P01_Elements_of_Design.png" alt="Elements of Design" loading="lazy"/>
+            <span class="badge">P01</span>
+          </div>
+          <div class="card-body">
+            <h3>Elements of Design</h3>
+            <p class="desc">A composition exploring the five visual forces: line, shape, form, texture, and space.</p>
+            <div class="card-links">
+              <a href="../../SVG_Source/P01_Elements_of_Design.svg" class="link svg">↗ SVG Source</a>
+              <a href="../../Final_PDF/Individual_PDF/P01_Elements_of_Design.pdf" class="link pdf">↗ PDF</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-thumb">
+            <img src="../../PNG_Previews/P02_Asymmetrical_Balance.png" alt="Asymmetrical Balance" loading="lazy"/>
+            <span class="badge">P02</span>
+          </div>
+          <div class="card-body">
+            <h3>Asymmetrical Balance</h3>
+            <p class="desc">Visual weight balanced through asymmetry — one heavy mass held in tension by lighter forms.</p>
+            <div class="card-links">
+              <a href="../../SVG_Source/P02_Asymmetrical_Balance.svg" class="link svg">↗ SVG Source</a>
+              <a href="../../Final_PDF/Individual_PDF/P02_Asymmetrical_Balance.pdf" class="link pdf">↗ PDF</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-thumb">
+            <img src="../../PNG_Previews/P03_Contrast_Focal_Point.png" alt="Contrast & Focal Point" loading="lazy"/>
+            <span class="badge">P03</span>
+          </div>
+          <div class="card-body">
+            <h3>Contrast & Focal Point</h3>
+            <p class="desc">A single bright focal point established through contrast, positioned on the rule of thirds.</p>
+            <div class="card-links">
+              <a href="../../SVG_Source/P03_Contrast_Focal_Point.svg" class="link svg">↗ SVG Source</a>
+              <a href="../../Final_PDF/Individual_PDF/P03_Contrast_Focal_Point.pdf" class="link pdf">↗ PDF</a>
+            </div>
+          </div>
+        </div>
+        </div><div class="gallery-row">
+        <div class="card">
+          <div class="card-thumb">
+            <img src="../../PNG_Previews/P04_Rhythm_Repetition.png" alt="Rhythm & Repetition" loading="lazy"/>
+            <span class="badge">P04</span>
+          </div>
+          <div class="card-body">
+            <h3>Rhythm & Repetition</h3>
+            <p class="desc">A visual pulse along a curved path, created through overlapping circles of varying scale and colour.</p>
+            <div class="card-links">
+              <a href="../../SVG_Source/P04_Rhythm_Repetition.svg" class="link svg">↗ SVG Source</a>
+              <a href="../../Final_PDF/Individual_PDF/P04_Rhythm_Repetition.pdf" class="link pdf">↗ PDF</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-thumb">
+            <img src="../../PNG_Previews/P05_Visual_Hierarchy.png" alt="Visual Hierarchy" loading="lazy"/>
+            <span class="badge">P05</span>
+          </div>
+          <div class="card-body">
+            <h3>Visual Hierarchy</h3>
+            <p class="desc">Three levels of typographic hierarchy: primary, secondary, and tertiary type with clear specifications.</p>
+            <div class="card-links">
+              <a href="../../SVG_Source/P05_Visual_Hierarchy.svg" class="link svg">↗ SVG Source</a>
+              <a href="../../Final_PDF/Individual_PDF/P05_Visual_Hierarchy.pdf" class="link pdf">↗ PDF</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-thumb">
+            <img src="../../PNG_Previews/P06_Grid_Layout.png" alt="12-Column Grid Layout" loading="lazy"/>
+            <span class="badge">P06</span>
+          </div>
+          <div class="card-body">
+            <h3>12-Column Grid Layout</h3>
+            <p class="desc">A 12-column grid system with 15 mm margins and 8 pt gutters, content snapped to the grid.</p>
+            <div class="card-links">
+              <a href="../../SVG_Source/P06_Grid_Layout.svg" class="link svg">↗ SVG Source</a>
+              <a href="../../Final_PDF/Individual_PDF/P06_Grid_Layout.pdf" class="link pdf">↗ PDF</a>
+            </div>
+          </div>
+        </div>
+        </div><div class="gallery-row">
+        <div class="card">
+          <div class="card-thumb">
+            <img src="../../PNG_Previews/P07_Z_Pattern_Layout.png" alt="Z-Pattern Layout" loading="lazy"/>
+            <span class="badge">P07</span>
+          </div>
+          <div class="card-body">
+            <h3>Z-Pattern Layout</h3>
+            <p class="desc">An eye-flow study tracing the Z-pattern reading path: logo → headline → image → CTA.</p>
+            <div class="card-links">
+              <a href="../../SVG_Source/P07_Z_Pattern_Layout.svg" class="link svg">↗ SVG Source</a>
+              <a href="../../Final_PDF/Individual_PDF/P07_Z_Pattern_Layout.pdf" class="link pdf">↗ PDF</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-thumb">
+            <img src="../../PNG_Previews/P08_Print_Layout.png" alt="A4 Print Layout" loading="lazy"/>
+            <span class="badge">P08</span>
+          </div>
+          <div class="card-body">
+            <h3>A4 Print Layout</h3>
+            <p class="desc">Print-ready A4 layout with 3 mm bleed, crop marks, trim line, and 3-column grid. True CMYK export.</p>
+            <div class="card-links">
+              <a href="../../SVG_Source/P08_Print_Layout.svg" class="link svg">↗ SVG Source</a>
+              <a href="../../Final_PDF/Individual_PDF/P08_Print_Layout.pdf" class="link pdf">↗ PDF</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-thumb">
+            <img src="../../PNG_Previews/P09_Digital_Post.png" alt="Digital Post" loading="lazy"/>
+            <span class="badge">P09</span>
+          </div>
+          <div class="card-body">
+            <h3>Digital Post</h3>
+            <p class="desc">Square 1080 × 1080 px social post with an 8 px spacing system and 64 px margins.</p>
+            <div class="card-links">
+              <a href="../../SVG_Source/P09_Digital_Post.svg" class="link svg">↗ SVG Source</a>
+              <a href="../../Final_PDF/Individual_PDF/P09_Digital_Post.pdf" class="link pdf">↗ PDF</a>
+            </div>
+          </div>
+        </div>
+        </div><div class="gallery-row">
+        <div class="card">
+          <div class="card-thumb">
+            <img src="../../PNG_Previews/P10_Typography_Study.png" alt="Typography Study" loading="lazy"/>
+            <span class="badge">P10</span>
+          </div>
+          <div class="card-body">
+            <h3>Typography Study</h3>
+            <p class="desc">Six typeface classifications compared using the same two letters: serif, sans-serif, slab, script, display, mono.</p>
+            <div class="card-links">
+              <a href="../../SVG_Source/P10_Typography_Study.svg" class="link svg">↗ SVG Source</a>
+              <a href="../../Final_PDF/Individual_PDF/P10_Typography_Study.pdf" class="link pdf">↗ PDF</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-thumb">
+            <img src="../../PNG_Previews/P11_Expressive_Typography.png" alt="Expressive Typography" loading="lazy"/>
+            <span class="badge">P11</span>
+          </div>
+          <div class="card-body">
+            <h3>Expressive Typography</h3>
+            <p class="desc">Type + colour = emotion: the word ENERGY set in rotated, gradient-filled letterforms.</p>
+            <div class="card-links">
+              <a href="../../SVG_Source/P11_Expressive_Typography.svg" class="link svg">↗ SVG Source</a>
+              <a href="../../Final_PDF/Individual_PDF/P11_Expressive_Typography.pdf" class="link pdf">↗ PDF</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-thumb">
+            <img src="../../PNG_Previews/P12_Save_Water_Poster.png" alt="Save Water Poster" loading="lazy"/>
+            <span class="badge">P12</span>
+          </div>
+          <div class="card-body">
+            <h3>Save Water Poster</h3>
+            <p class="desc">A3 awareness poster with a large water-drop focal point, ripple rings, and true CMYK export.</p>
+            <div class="card-links">
+              <a href="../../SVG_Source/P12_Save_Water_Poster.svg" class="link svg">↗ SVG Source</a>
+              <a href="../../Final_PDF/Individual_PDF/P12_Save_Water_Poster.pdf" class="link pdf">↗ PDF</a>
+            </div>
+          </div>
+        </div>
+        </div><div class="gallery-row">
+        <div class="card">
+          <div class="card-thumb">
+            <img src="../../PNG_Previews/P13_Visual_Narrative.png" alt="Visual Narrative" loading="lazy"/>
+            <span class="badge">P13</span>
+          </div>
+          <div class="card-body">
+            <h3>Visual Narrative</h3>
+            <p class="desc">A four-part growth story — seed, sprout, plant, tree — told in one continuous horizon.</p>
+            <div class="card-links">
+              <a href="../../SVG_Source/P13_Visual_Narrative.svg" class="link svg">↗ SVG Source</a>
+              <a href="../../Final_PDF/Individual_PDF/P13_Visual_Narrative.pdf" class="link pdf">↗ PDF</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-thumb">
+            <img src="../../PNG_Previews/P14_Concept_to_Final.png" alt="Concept to Final" loading="lazy"/>
+            <span class="badge">P14</span>
+          </div>
+          <div class="card-body">
+            <h3>Concept to Final</h3>
+            <p class="desc">Design process from research to refinement: moodboard, thumbnail sketch, digital draft, refined final.</p>
+            <div class="card-links">
+              <a href="../../SVG_Source/P14_Concept_to_Final.svg" class="link svg">↗ SVG Source</a>
+              <a href="../../Final_PDF/Individual_PDF/P14_Concept_to_Final.pdf" class="link pdf">↗ PDF</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-thumb">
+            <img src="../../PNG_Previews/P15_Brand_Identity.png" alt="Brew & Bloom Brand Identity" loading="lazy"/>
+            <span class="badge">P15</span>
+          </div>
+          <div class="card-body">
+            <h3>Brew & Bloom Brand Identity</h3>
+            <p class="desc">A complete fictional café brand identity: logo, palette, typography, business card, menu, social post.</p>
+            <div class="card-links">
+              <a href="../../SVG_Source/P15_Brand_Identity.svg" class="link svg">↗ SVG Source</a>
+              <a href="../../Final_PDF/Individual_PDF/P15_Brand_Identity.pdf" class="link pdf">↗ PDF</a>
+            </div>
+          </div>
+        </div>
+        </div>
+  </div>
+
+  <footer>
+    <p>Applied Visual Design — 15 Practicals &nbsp;|&nbsp; Editable SVG sources in <a href="../../SVG_Source/">SVG_Source/</a> &nbsp;|&nbsp; PDFs in <a href="../../Final_PDF/">Final_PDF/</a></p>
+  </footer>
+</div>
+</body>
+</html>
